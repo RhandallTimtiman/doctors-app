@@ -250,12 +250,8 @@ class _RegistrationAdditionalInformationState
                                         SizedBox(
                                           height: Screen.height(context) * 0.04,
                                           child: MaterialButton(
-                                            color: const Color.fromRGBO(
-                                              73,
-                                              130,
-                                              61,
-                                              1,
-                                            ),
+                                            color:
+                                                Theme.of(context).primaryColor,
                                             height:
                                                 Screen.height(context) * 0.04,
                                             minWidth:

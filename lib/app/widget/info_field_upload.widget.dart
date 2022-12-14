@@ -85,12 +85,7 @@ class _InfoFieldUploadState extends State<InfoFieldUpload> {
                     child: Icon(
                       widget.prefixIcon,
                       // size: 20,
-                      color: const Color.fromRGBO(
-                        73,
-                        130,
-                        61,
-                        1,
-                      ),
+                      color: Theme.of(context).primaryColor,
                     ),
                   )
                 : null,

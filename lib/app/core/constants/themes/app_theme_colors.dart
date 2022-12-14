@@ -19,9 +19,9 @@ class LightColors extends ThemeColors {
   LightColors()
       : super(
           primary: const Color.fromRGBO(
-            73,
-            130,
-            61,
+            55,
+            48,
+            154,
             1,
           ),
           secondary: const Color(0xFF696969),
