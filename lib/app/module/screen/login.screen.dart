@@ -18,7 +18,21 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-        color: const Color.fromRGBO(186, 221, 214, 1),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.center,
+            end: Alignment.bottomCenter,
+            colors: [
+              const Color.fromRGBO(
+                55,
+                48,
+                154,
+                0.2,
+              ),
+              Theme.of(context).primaryColor,
+            ],
+          ),
+        ),
         height: Screen.height(context),
         width: Screen.width(context),
         child: Column(
@@ -32,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: Screen.height(context) * 0.72,
               width: Screen.width(context) * 0.9,
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.4),
+                color: Colors.white.withOpacity(0.7),
                 borderRadius: BorderRadius.circular(24),
               ),
               child: Column(

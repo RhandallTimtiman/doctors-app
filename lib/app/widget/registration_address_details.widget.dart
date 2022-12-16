@@ -49,8 +49,14 @@ class _RegistrationAddressDetailsState
     return Container(
       width: Screen.width(context),
       color: Colors.white,
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      padding: EdgeInsets.all(
+        Screen.getProportionateScreenHeight(
+          context,
+          16,
+        ),
+      ),
       child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Form(
           key: widget.formKey,
           child: Column(
@@ -63,7 +69,10 @@ class _RegistrationAddressDetailsState
                 ),
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 8),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  8,
+                ),
               ),
               InfoField(
                 controller: Get.find<RegistrationAddressrController>()
@@ -84,7 +93,10 @@ class _RegistrationAddressDetailsState
                     .showModalCountries,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 isRequired: true,
@@ -105,7 +117,10 @@ class _RegistrationAddressDetailsState
                     .showModalCountries,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 isRequired: true,
@@ -126,7 +141,10 @@ class _RegistrationAddressDetailsState
                     .showModalCountries,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 isRequired: true,
@@ -147,7 +165,10 @@ class _RegistrationAddressDetailsState
                     .showModalCountries,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 isRequired: true,
@@ -168,7 +189,10 @@ class _RegistrationAddressDetailsState
                     .showModalCountries,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 isRequired: true,
@@ -181,7 +205,10 @@ class _RegistrationAddressDetailsState
                 initialValue: 'Test initial value',
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 isRequired: true,
@@ -200,7 +227,10 @@ class _RegistrationAddressDetailsState
                 ),
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               const InfoField(
                 label: 'Additional Address Information (ie.bldg, etc)',
@@ -209,7 +239,10 @@ class _RegistrationAddressDetailsState
                 isEnabled: true,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -217,7 +250,9 @@ class _RegistrationAddressDetailsState
                   Expanded(
                     child: MaterialButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(
+                          10,
+                        ),
                       ),
                       color: Colors.grey,
                       onPressed: () {},
@@ -239,7 +274,9 @@ class _RegistrationAddressDetailsState
                   Expanded(
                     child: MaterialButton(
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(
+                          10,
+                        ),
                       ),
                       color: Theme.of(context).primaryColor,
                       onPressed: () {

@@ -371,7 +371,7 @@ class ProductDetails extends StatelessWidget {
                 ),
               ),
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.transparent,
                 ),
                 height: Screen.height(context) * .1,

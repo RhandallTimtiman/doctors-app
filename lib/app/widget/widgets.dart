@@ -24,3 +24,4 @@ export 'drawer_item.widget.dart';
 export 'auth_input_field.widget.dart';
 export 'carousel.dart';
 export 'container_bg.widget.dart';
+export 'clinic_section.widget.dart';

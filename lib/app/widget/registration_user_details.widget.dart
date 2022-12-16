@@ -64,8 +64,14 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
     return Container(
       width: Screen.width(context),
       color: Colors.white,
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      padding: EdgeInsets.all(
+        Screen.getProportionateScreenHeight(
+          context,
+          16,
+        ),
+      ),
       child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Form(
           key: widget.formKey,
           child: Column(
@@ -82,7 +88,10 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 ),
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 8),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  8,
+                ),
               ),
               InfoField(
                 label: 'Create Username',
@@ -96,7 +105,10 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 isRequired: true,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               Obx(
                 () => InfoField(
@@ -116,7 +128,10 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 ),
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               Obx(
                 () => InfoField(
@@ -141,7 +156,10 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 ),
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 label: 'Email Address',
@@ -155,7 +173,10 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 isRequired: true,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 label: 'First Name',
@@ -169,7 +190,10 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 isRequired: true,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 label: 'M.I',
@@ -183,7 +207,10 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 isRequired: true,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 label: 'Last Name',
@@ -197,7 +224,10 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 isRequired: true,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               InfoField(
                 label: 'Mobile Number',
@@ -209,7 +239,10 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 // prefixIcon: Icons.person_outline_rounded,
               ),
               SizedBox(
-                height: Screen.getProportionateScreenHeight(context, 24),
+                height: Screen.getProportionateScreenHeight(
+                  context,
+                  24,
+                ),
               ),
               DateField(
                 label: 'Birthdate',

@@ -14,6 +14,9 @@ class RegistrationAdditionalInfoController extends GetxController {
   TextEditingController pwdIdNumber = TextEditingController();
   TextEditingController pwdIdNumberExpiration = TextEditingController();
 
+  TextEditingController clinicNameController = TextEditingController();
+  TextEditingController clinicAddressController = TextEditingController();
+
   final additionalInfoFormKey = GlobalKey<FormState>();
 
   late CroppedFile seniorIdImage;
@@ -82,5 +85,23 @@ class RegistrationAdditionalInfoController extends GetxController {
         content: const NotificationModal(),
       ),
     );
+  }
+
+  showDate(context) async {
+    var newSelectedDate = await showDatePicker(
+        initialEntryMode: DatePickerEntryMode.calendarOnly,
+        context: context,
+        initialDate: DateTime.now().subtract(
+          const Duration(days: 3650),
+        ),
+        firstDate: DateTime.now().subtract(
+          const Duration(days: 3650),
+        ),
+        lastDate: DateTime.now(),
+        builder: (context, child) {
+          return Container(
+            child: child,
+          );
+        });
   }
 }

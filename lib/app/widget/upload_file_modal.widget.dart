@@ -22,8 +22,15 @@ class _UploadFileModalState extends State<UploadFileModal> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 18),
-      constraints: BoxConstraints(maxHeight: Screen.height(context) * 0.55),
+      padding: EdgeInsets.all(
+        Screen.getProportionateScreenHeight(
+          context,
+          12,
+        ),
+      ),
+      constraints: BoxConstraints(
+        maxHeight: Screen.height(context) * 0.45,
+      ),
       width: Screen.width(context) * 0.7,
       child: Flex(
         direction: Axis.vertical,
@@ -75,13 +82,13 @@ class _UploadFileModalState extends State<UploadFileModal> {
                           child: Container(
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.green.shade100,
+                              color: Theme.of(context).primaryColor,
                             ),
                             height: Screen.height(context) * 0.3,
                             width: Screen.width(context) * 0.2,
-                            child: Icon(
+                            child: const Icon(
                               FontAwesomeIcons.camera,
-                              color: Theme.of(context).primaryColor,
+                              color: Colors.white,
                             ),
                           ),
                         ),
@@ -91,13 +98,13 @@ class _UploadFileModalState extends State<UploadFileModal> {
                           child: Container(
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.green.shade100,
+                              color: Theme.of(context).primaryColor,
                             ),
                             height: Screen.height(context) * 0.3,
                             width: Screen.width(context) * 0.2,
-                            child: Icon(
+                            child: const Icon(
                               Icons.upload,
-                              color: Theme.of(context).primaryColor,
+                              color: Colors.white,
                             ),
                           ),
                         ),

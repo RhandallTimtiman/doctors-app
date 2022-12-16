@@ -95,8 +95,8 @@ class _AuthInputFieldState extends State<AuthInputField> {
                 ? const EdgeInsets.only(top: 12, left: 48.0, bottom: 8)
                 : const EdgeInsets.only(top: 12, left: 24),
             counterText: "",
-            filled: true,
-            fillColor: const Color.fromRGBO(214, 235, 230, 1),
+            // filled: true,
+            // fillColor: Colors.white,
             hintText: widget.hint ?? '',
             hintStyle: TextStyle(
               fontSize: Screen.getProportionateScreenHeight(

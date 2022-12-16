@@ -80,14 +80,7 @@ class MainController extends GetxController {
         ),
         padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
         decoration: BoxDecoration(
-          color: isActive
-              ? const Color.fromRGBO(
-                  38,
-                  85,
-                  20,
-                  1,
-                )
-              : Theme.of(context).primaryColor,
+          color: isActive ? Colors.white : Theme.of(context).primaryColor,
           borderRadius: const BorderRadius.all(
             Radius.circular(8),
           ),
@@ -98,16 +91,16 @@ class MainController extends GetxController {
             Icon(
               icon,
               size: Screen.height(context) * 0.04,
-              color: Colors.white,
+              color: isActive ? Theme.of(context).primaryColor : Colors.white,
             ),
             const SizedBox(
               height: 2,
             ),
             Text(
               label,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 9,
-                color: Colors.white,
+                color: isActive ? Theme.of(context).primaryColor : Colors.white,
               ),
             ),
           ],
