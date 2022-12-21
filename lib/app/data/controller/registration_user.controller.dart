@@ -35,4 +35,8 @@ class RegistrationUserController extends GetxController {
   validateConfirmPassword(String confirmPass) {
     return confirmPass != passwordController.text;
   }
+
+  setBirthdate(String birthday) {
+    birthdateController.text = birthday;
+  }
 }

@@ -5,6 +5,7 @@ import 'package:consumer_app/app/data/controller/controller.dart';
 import 'package:consumer_app/app/widget/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 class RegistrationUserDetails extends StatefulWidget {
   final GlobalKey<FormState> formKey;
@@ -20,7 +21,6 @@ class RegistrationUserDetails extends StatefulWidget {
 
 class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
   bool isChecked = false;
-  final registerUserController = Get.find<RegistrationUserController>();
 
   Color getColor(Set<MaterialState> states) {
     const Set<MaterialState> interactiveStates = <MaterialState>{
@@ -55,6 +55,11 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
             child: child,
           );
         });
+    if (newSelectedDate != null) {
+      String formattedDate = DateFormat('MMM dd, yyyy').format(newSelectedDate);
+      debugPrint(formattedDate);
+      Get.find<RegistrationUserController>().setBirthdate(formattedDate);
+    }
     inspect(newSelectedDate);
   }
 
@@ -236,7 +241,6 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 isEnabled: true,
                 controller: Get.find<RegistrationUserController>()
                     .mobileNumberController,
-                // prefixIcon: Icons.person_outline_rounded,
               ),
               SizedBox(
                 height: Screen.getProportionateScreenHeight(
@@ -250,6 +254,8 @@ class _RegistrationUserDetailsState extends State<RegistrationUserDetails> {
                 isEnabled: true,
                 prefixIcon: Icons.calendar_today,
                 callback: showDate,
+                controller:
+                    Get.find<RegistrationUserController>().birthdateController,
               ),
               const SizedBox(
                 height: 20,

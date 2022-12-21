@@ -40,6 +40,7 @@ class _DateFieldState extends State<DateField> {
           ),
         ),
         TextFormField(
+          controller: widget.controller,
           textInputAction: TextInputAction.next,
           initialValue: widget.initialValue,
           style: TextStyle(
@@ -47,15 +48,7 @@ class _DateFieldState extends State<DateField> {
             color: Colors.grey.shade600,
           ),
           obscureText: false,
-
-          // cursorColor: const Color.fromRGBO(
-          //   73,
-          //   130,
-          //   61,
-          //   1,
-          // ),
           readOnly: true,
-          controller: widget.controller,
           onTap: widget.callback,
           decoration: InputDecoration(
             isDense: widget.prefixIcon == null,
