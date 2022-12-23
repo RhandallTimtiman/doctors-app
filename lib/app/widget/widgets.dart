@@ -25,3 +25,8 @@ export 'auth_input_field.widget.dart';
 export 'carousel.dart';
 export 'container_bg.widget.dart';
 export 'clinic_section.widget.dart';
+export 'erx_scorecard.widget.dart';
+export 'erx_top_card.widget.dart';
+export 'erx_top_medicine_content.widget.dart';
+export 'erx_top_patient_content.widget.dart';
+export 'common/erx_appbar.widget.dart';

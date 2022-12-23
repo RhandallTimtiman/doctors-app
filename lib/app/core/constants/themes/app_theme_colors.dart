@@ -24,7 +24,7 @@ class LightColors extends ThemeColors {
             154,
             1,
           ),
-          secondary: const Color(0xFF696969),
+          secondary: const Color(0xff63a4ee),
           background: const Color(0xffF2F2F2),
           mainBackground: Colors.white,
           primaryTextColor: Colors.black,

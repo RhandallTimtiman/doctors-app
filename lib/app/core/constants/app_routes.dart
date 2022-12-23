@@ -37,6 +37,21 @@ class AppRoutes {
       page: () => const FamilyContactScreen(),
       binding: FamilyContactBinding(),
     ),
+    GetPage(
+      name: '/erx',
+      page: () => const ErxScreen(),
+      binding: ErxBinding(),
+    ),
+    GetPage(
+      name: '/create-eprescription',
+      page: () => const CreateEprescription(),
+      binding: CreateEprescriptionBinding(),
+    ),
+    GetPage(
+      name: '/add-medicine',
+      page: () => const AddMedeicineScreen(),
+      binding: AddMedicineBinding(),
+    ),
   ];
 
   static final List<DrawerItemModel> drawerRoutes = [

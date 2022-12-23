@@ -8,3 +8,6 @@ export 'registration.controller.dart';
 export 'registration_user_details.controller.dart';
 export 'category.controller.dart';
 export 'login.controller.dart';
+export 'erx.controller.dart';
+export 'create_eprescription.controller.dart';
+export 'add_medicine.controller.dart';
