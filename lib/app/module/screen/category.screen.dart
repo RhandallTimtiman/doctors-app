@@ -26,7 +26,7 @@ class CategoryScreen extends GetView<CategoryController> {
           child: Column(
             children: [
               SizedBox(
-                height: size.height * .15,
+                height: size.height * .1,
                 child: Image.asset(
                   'assets/images/ods_logo.png',
                   fit: BoxFit.cover,

@@ -9,7 +9,7 @@ class MainController extends GetxController {
   RxInt currentIndex = 0.obs;
   final pages = <String>[
     '/home',
-    '/home',
+    '/category',
     '/home',
     '/home',
     '/profile',
@@ -57,19 +57,23 @@ class MainController extends GetxController {
         binding: FamilyContactBinding(),
       );
     }
-    if (settings.name == '/home') {
+    if (settings.name == '/category') {
       return GetPageRoute(
         settings: settings,
-        page: () => const FamilyContactScreen(),
-        binding: FamilyContactBinding(),
+        page: () => const CategoryScreen(),
       );
     }
 
     return null;
   }
 
-  Widget bottomNavCard(BuildContext context, bool isActive, IconData icon,
-      String label, int index) {
+  Widget bottomNavCard(
+    BuildContext context,
+    bool isActive,
+    IconData icon,
+    String label,
+    int index,
+  ) {
     return GestureDetector(
       onTap: () {
         changePage(index);
@@ -109,9 +113,9 @@ class MainController extends GetxController {
     );
   }
 
-  AppBar customAppBar(index) {
+  AppBar customAppBar(index, context) {
     if (index != 0) {
-      return appBarWithSearch();
+      return appBarWithSearch(context);
     }
     return AppBar(
       leading: GestureDetector(
@@ -147,12 +151,12 @@ class MainController extends GetxController {
           ),
         ),
       ],
-      backgroundColor: const Color.fromRGBO(73, 130, 61, 1),
+      backgroundColor: Theme.of(context).primaryColor,
       elevation: 0,
     );
   }
 
-  AppBar appBarWithSearch() {
+  AppBar appBarWithSearch(context) {
     return AppBar(
       leading: GestureDetector(
         onTap: () => openDrawer(),
@@ -187,7 +191,7 @@ class MainController extends GetxController {
           ),
         ),
       ],
-      backgroundColor: const Color.fromRGBO(73, 130, 61, 1),
+      backgroundColor: Theme.of(context).primaryColor,
       elevation: 0,
     );
   }

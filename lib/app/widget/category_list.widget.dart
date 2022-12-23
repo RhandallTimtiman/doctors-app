@@ -1,10 +1,14 @@
+import 'package:consumer_app/app/core/utilities/size.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 
 class CategoryList extends StatelessWidget {
   const CategoryList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    TextTheme textTheme = Theme.of(context).textTheme;
     var size = MediaQuery.of(context).size;
     return Expanded(
       child: Container(
@@ -42,16 +46,51 @@ class CategoryList extends StatelessWidget {
                   runSpacing: 20,
                   children: [
                     for (var i = 0; i < 20; i++)
-                      Container(
-                        height: size.height * .2,
-                        width: size.width * .40,
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(
-                              20,
+                      GestureDetector(
+                        onTap: () => Get.toNamed('/erx'),
+                        child: Container(
+                          height: size.height * .2,
+                          width: size.width * .40,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(
+                                20,
+                              ),
                             ),
                           ),
+                          child: i == 1
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      FontAwesomeIcons.prescription,
+                                      size: Screen.getProportionateScreenHeight(
+                                        context,
+                                        48,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height:
+                                          Screen.getProportionateScreenHeight(
+                                        context,
+                                        24,
+                                      ),
+                                    ),
+                                    Text(
+                                      'ePrescription',
+                                      style: textTheme.bodyText1!.copyWith(
+                                        fontSize:
+                                            Screen.getProportionateScreenHeight(
+                                          context,
+                                          14,
+                                        ),
+                                        color: const Color(0xff63a4ee),
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : const SizedBox.shrink(),
                         ),
                       ),
                   ],

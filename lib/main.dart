@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: AppTheme().light,
-      initialRoute: '/erx',
+      initialRoute: '/',
       debugShowCheckedModeBanner: false,
       initialBinding: LoginBinding(),
       getPages: AppRoutes.routes,

@@ -11,7 +11,7 @@ class MainScreen extends GetView<MainController> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: controller.scaffoldKey,
-      appBar: controller.customAppBar(controller.currentIndex.value),
+      appBar: controller.customAppBar(controller.currentIndex.value, context),
       drawer: const MainDrawer(),
       body: Navigator(
         key: Get.nestedKey(1),
@@ -33,11 +33,12 @@ class MainScreen extends GetView<MainController> {
                 0,
               ),
               controller.bottomNavCard(
-                  context,
-                  controller.currentIndex.value == 1,
-                  Icons.category,
-                  'Category',
-                  1),
+                context,
+                controller.currentIndex.value == 1,
+                Icons.category,
+                'Category',
+                1,
+              ),
               controller.bottomNavCard(
                   context,
                   controller.currentIndex.value == 2,
