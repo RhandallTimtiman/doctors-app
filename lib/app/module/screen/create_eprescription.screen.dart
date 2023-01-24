@@ -1,6 +1,7 @@
 import 'package:consumer_app/app/core/utilities/size.dart';
 import 'package:consumer_app/app/data/controller/controller.dart';
 import 'package:consumer_app/app/data/models/models.dart';
+import 'package:consumer_app/app/module/screen/screen.dart';
 import 'package:consumer_app/app/widget/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -69,6 +70,54 @@ class _CreateEprescriptionState extends State<CreateEprescription> {
                         color: Theme.of(context).primaryColor,
                       ),
                       callback: () {},
+                    ),
+                    SizedBox(
+                      height: Screen.getProportionateScreenHeight(
+                        context,
+                        24,
+                      ),
+                    ),
+                    MaterialButton(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(1000),
+                      ),
+                      color: Theme.of(context).primaryColor,
+                      minWidth: double.infinity,
+                      onPressed: () async {
+                        var result = await Get.to(
+                          () => const AddPatientScreen(),
+                        );
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.add,
+                            color: Colors.white,
+                            size: Screen.getProportionateScreenHeight(
+                              context,
+                              24,
+                            ),
+                          ),
+                          SizedBox(
+                            width: Screen.getProportionateScreenWidth(
+                              context,
+                              8,
+                            ),
+                          ),
+                          Text(
+                            'Add Patient',
+                            style: textTheme.headline6!.copyWith(
+                              fontSize: Screen.getProportionateScreenHeight(
+                                context,
+                                16,
+                              ),
+                              fontWeight: FontWeight.normal,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(
                       height: Screen.getProportionateScreenHeight(

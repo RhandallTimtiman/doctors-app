@@ -10,3 +10,4 @@ export 'product_details.screen.dart';
 export 'erx.screen.dart';
 export 'create_eprescription.screen.dart';
 export 'add_medicine.screen.dart';
+export 'add_patient.screen.dart';

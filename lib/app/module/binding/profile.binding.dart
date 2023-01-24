@@ -6,6 +6,7 @@ class ProfileBinding extends Bindings {
   void dependencies() {
     Get.put(
       ProfileController(),
+      permanent: true,
     );
   }
 }
